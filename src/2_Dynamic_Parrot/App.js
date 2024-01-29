@@ -1,5 +1,6 @@
+// 2_Dynamic_Parrot
 import React, { useState, useEffect, useRef } from "react";
-import "./App.css"; // Make sure to create a corresponding CSS file
+import "./App.css";
 
 const LAMBDA_POST_MSG = "<<YOUR LAMBDA FUNCTION URL>>";
 

@@ -1,5 +1,6 @@
+// 1_Static_Parrot
 import React, { useState, useEffect, useRef } from "react";
-import "./App.css"; // Make sure to create a corresponding CSS file
+import "./App.css";
 
 function App() {
   const [messages, setMessages] = useState([]);
