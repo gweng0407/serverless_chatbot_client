@@ -5,7 +5,7 @@ import "./App.css";
 // 'REACT_APP_' 필수
 const {
   REACT_APP_LAMBDA_GET_CHAT,
-  LAMBDA_POST_MSG,
+  REACT_APP_LAMBDA_POST_MSG,
   REACT_APP_LAMBDA_PUT_REACTION,
 } = process.env;
 
@@ -87,7 +87,7 @@ function App() {
     setMessages([...messages, message]);
     setNewMessage("");
 
-    callApi(REACT_APP_LAMBDA_POST_CHAT, "POST", message)
+    callApi(REACT_APP_LAMBDA_POST_MSG, "POST", message)
       .then((res) => res.json())
       .then((msg) => {
         setMessages((msgs) => [...msgs, msg]);

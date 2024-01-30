@@ -2,7 +2,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-const { LAMBDA_POST_MSG } = process.env;
+// 'REACT_APP_' 필수
+const { REACT_APP_LAMBDA_POST_MSG } = process.env;
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -48,7 +49,7 @@ function App() {
     setMessages([...messages, message]);
     setNewMessage("");
 
-    callApi(LAMBDA_POST_MSG, "POST", { content: newMessage })
+    callApi(REACT_APP_LAMBDA_POST_MSG, "POST", { content: newMessage })
       .then((res) => res.json())
       .then((res) => {
         const parrotResponse = { text: res, sender: "bot" };
