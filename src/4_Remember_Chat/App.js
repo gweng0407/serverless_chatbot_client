@@ -50,6 +50,7 @@ function App() {
       return response;
     } catch (error) {
       console.error("API call error:", error);
+      // 에러 발생시 이전 상태로 복원
       setMessages(messages);
     }
   };
