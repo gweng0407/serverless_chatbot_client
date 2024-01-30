@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-const LAMBDA_POST_MSG = "<<YOUR LAMBDA FUNCTION URL>>";
+const { LAMBDA_POST_MSG } = process.env;
 
 function App() {
   const [messages, setMessages] = useState([]);

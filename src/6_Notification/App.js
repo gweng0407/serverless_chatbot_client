@@ -5,7 +5,7 @@ import "./App.css";
 // 'REACT_APP_' 필수
 const {
   REACT_APP_LAMBDA_GET_CHAT,
-  REACT_APP_LAMBDA_POST_CHAT,
+  LAMBDA_POST_MSG,
   REACT_APP_LAMBDA_PUT_REACTION,
 } = process.env;
 
